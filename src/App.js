@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Home from './Home.js';
+import Stories from './Stories.js';
 import {
   BrowserRouter as Router,
   Switch,
@@ -9,6 +10,10 @@ import {
 import './App.css';
 
 function App() {
+
+  const [route, setRoute] = useState('home');
+  const [story, setStory] = useState('none');
+
   return (
     <div className="App">
 
@@ -17,16 +22,16 @@ function App() {
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link className={route === "home" ? "selected" : ''} onClick={() => { setRoute('home'); setStory('none'); }} to="/">Home</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link className={route === "about" ? "selected" : ''} onClick={() => { setRoute('about'); setStory('none'); }} to="/about">About</Link>
             </li>
             <li>
-              <Link to="/novel">The Dweller's House</Link>
+              <Link className={route === "novel" ? "selected" : ''} onClick={() => { setRoute('novel'); setStory('none'); }} to="/novel">The Dweller's House</Link>
             </li>
             <li>
-              <Link to="/stories">Stories</Link>
+              <Link className={route === "stories" ? "selected" : ''} onClick={() => { setRoute('stories'); setStory('none'); }} to="/stories">Stories</Link>
             </li>
           </ul>
         </nav>
@@ -41,13 +46,10 @@ function App() {
             <p>novel page</p>
           </Route>
           <Route path="/stories">
-            <p>stories page</p>
-          </Route>
-          <Route path="/stories">
-            <p>stories page</p>
+            <Stories setStory={setStory} story={story} />
           </Route>
           <Route path="*">
-            <Home name="Eden" />
+            <Home />
           </Route>
         </Switch>
       </Router>

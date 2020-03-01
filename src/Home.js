@@ -1,5 +1,10 @@
 import React from 'react';
+import portrait from './eden.png';
 function Welcome(props) {
-  return <h1>Hello, {props.name}</h1>;
+  return <div id="Home" className="layout">
+    <h1>Eden Fenn</h1>
+    <h2>dispatches from probable futures</h2>
+    <img src={portrait} className="portrait" />
+  </div>;
 }
 export default Welcome;
