@@ -22,7 +22,7 @@ function Stories(props) {
     {props.story === 'fiveSixSeven' &&
       <div id="story-reader">
         <div className="story">
-          <h3 className="story-link" >Five Six Seven</h3>
+          <h3 className="story-link header" >Five Six Seven</h3>
           <h4>published in Asimov's Science Fiction Magazine #462</h4>
         </div>
         <div id="story-body">
