@@ -160,7 +160,7 @@ nav ul li a.selected {
 .stories-list {
   height: calc(100% - 200px);
   width: 100%;
-  top: 0;
+  top: 65px;
   left: 0;
   position: absolute;
   display: flex;
@@ -171,7 +171,8 @@ nav ul li a.selected {
 
 .story {
   width: 100%;
-  margin: 20px;
+  text-align: left;
+  margin: 20px -40px 20px 40px;
 }
 
 h3.story-link {
@@ -313,4 +314,14 @@ h3.story-link.coming-soon {
   nav ul li a {
     height: 40px;
   }
+}
+.story h3 a {
+  text-decoration: none;
+  color: black;
+}
+.story h3 a img {
+  display: inline-block;
+  max-height: 1rem;
+  margin-right: 0.2rem;
+  transform: translate3d(0, -0.1rem, 0);
 }

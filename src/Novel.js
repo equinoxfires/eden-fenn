@@ -1,5 +1,5 @@
 import React from 'react';
-import outerSpace from './space.png';
+import outerSpace from './space.jpg';
 import { Link } from 'react-router-dom';
 import outboundBlack from './outbound_black.png';
 function About(props) {
@@ -12,7 +12,7 @@ function About(props) {
 
       <p>Agents, <a href="mailto:eden@edenfenn.com"><span className="about-link">get in touch <img src={outboundBlack}></img></span></a> to request the full query letter and chapters from the novel!</p>
     </div>
-    <img src={outerSpace} className="portrait small" alt="accent image of stars" />
+    <img src={outerSpace} className="portrait small" alt="outer space" />
 
   </div>;
 }
