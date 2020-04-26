@@ -12,8 +12,8 @@ function Stories(props) {
           <h4>published in <em>Nature Futures</em> March 2020</h4>
         </div>
         <div className="story">
-          <h3 className="story-link coming-soon">Gaia Hypothesis</h3>
-          <h4>coming soon in <em>Daily Science Fiction</em></h4>
+          <h3 className="story-link"><a target="blank" href="https://dailysciencefiction.com/science-fiction/other-worlds-sf/eden-fenn/gaia-hypothesis">Gaia Hypothesis  <img className="outbound-icon" src={outboundBlack} /></a></h3>
+          <h4>published in <em>Daily Science Fiction</em> April 2020</h4>
         </div>
         <div className="story">
           <h3 className="story-link" onClick={() => { props.setStory('fiveSixSeven') }}>Five Six Seven</h3>
